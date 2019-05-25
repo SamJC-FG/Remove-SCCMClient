@@ -45,15 +45,18 @@ That's it, it's dead simple.
     - Incorporate Benny's Error-Logging module so we can have the console output write to a file in a standardized matter.
 
 ## What's new?
-######v0.5
+###0.5
 - Initial test-build. This is a bludgen tool to uninstall sccm for now, still need to do some clean up work by using the tools the guide suggests, and restart the machine manually
-######v0.6
+
+###v0.6
 - Script calls upon ccmsetup \uninstall, waits, and kills process
 - Script calls upon ccmclean
 - Script calls upon .Net Framework 4.6.1 as per the instructions in confluence page
 - Added some logic so functions only execute now when their parent tasks have finished
-######v0.6.1
+
+###v0.6.1
 - Removed most of the logic. Not happy with the reliability of the detection since the initial 4 services are seldom-enumerated. It is better to leave as-is.
     - That, but also checking if a process is not running is redundant to check. We kill the process as part of the start-up logic anyway, there is no need to check if its there. It is more worthwhile to retry if something fails, and then append a message to a log for an IT team member to investigate
-######V0.6.2 (CURRENT)
+
+###V0.6.2 (CURRENT)
 - Removed ccmclean.exe, and the .NET install in the "tools directory".
