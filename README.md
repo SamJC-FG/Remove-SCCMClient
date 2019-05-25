@@ -9,6 +9,17 @@ All this script focuses on is removing the SCCM client, cleaning up its artifact
 
 The details in the logic are available in the source code. And yes, you're free to modify this for your environment. I am only looking to save SysAdmin/System Engineer's time when handling naughty SCCM clients :)
 
+## Why should I use this? There are better tools out there.
+You are certainly right. I am particularly a huge fan of Client Center for Configuration Manager (https://github.com/rzander/sccmclictr)
+
+However, some of these tools like this are so good, that the extra bells and whistles they feature sometimes don't work after a ConfigMan console update, or Client version update. And so you have to go back to doing things manually. It is a real bummer having to wait for the author to fix this, or for you to jerry-rig a fix yourself.
+
+The point of my script is that it provides a specific focus on what Desktop support teams mostly use these tools for: troubleshooting bad clients. And 99% of the time, uninstalling the client and reinstalling it fixes the problem.
+
+By creating a relatively lean tool, that only focuses on deleting files and assuredly removing SCCM clients, it provides better predictability when getting the task done.
+
+So if you do happen to run into this kind of issue and these more feature-rich tools don't cut it, why not give my script a go? At this stage, there is nothing to lose. If it ends up working, that's great!
+
 ## How to install
 Pretty straightforward, only two steps:
 1) Clone this repo, or download the zip file
