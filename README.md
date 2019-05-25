@@ -39,10 +39,10 @@ Unfortunately, a limitation of the ccmclean.exe tool, is that you need to intera
 That's it, it's dead simple.
 
 ## Future To-Do items
-- Other things I want to do:
-    - Redo the firewall rules function to use the Powershell cmdlets instead. This will futureproof this tool for Powershell Core
-    - Create the internal helpfile and list off what things can be ignored, and what things need attention. This will improve tenfold when Benny's logging module is incorporated
-    - Incorporate Benny's Error-Logging module so we can have the console output write to a file in a standardized matter.
+- Redo the firewall rules function to use the Powershell cmdlets instead. This will futureproof this tool for Powershell Core
+- Create the internal helpfile and list off what things can be ignored, and what things need attention. This will improve tenfold when Benny's logging module is incorporated
+- Incorporate Benny's Error-Logging module so we can have the console output write to a file in a standardized matter.
+- Add a message for the current item being deleted in the respective deletion loops.
 
 ## What's new?
 
