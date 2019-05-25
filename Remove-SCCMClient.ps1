@@ -4,9 +4,6 @@ process (if they do), and what remediation action IT staff can undertake to reso
 - Other things I want to do:
     - Redo the firewall rules function to use the Powershell cmdlets instead. This will futureproof this tool for Powershell Core
     - Create the internal helpfile and list off what things can be ignored, and what things need attention. This will improve tenfold when Benny's logging module is incorporated
-    - Incorporate Benny's Error-Logging module so we can have the console output write to a file.
-        - This includes an ISO standard date convention, and other neat goodies that elminates a lot of the work this script will need for a useful logging feature
-    - The functions are ordered for a specific reason. This is based on the SCCM client removal instructions. I need to add some extra logic to make sure they don't just fire off sequentially, but they do it if their dependency finishes its job first.
 
 What's new?
 v0.5
@@ -19,6 +16,8 @@ v0.6
 v0.6.1
 - Removed most of the logic. Not happy with the reliability of the detection since the initial 4 services are seldom-enumerated. It is better to leave as-is.
     - That, but also checking if a process is not running is redundant to check. We kill the process as part of the start-up logic anyway, there is no need to check if its there. It is more worthwhile to retry if something fails, and then append a message to a log for an IT team member to investigate
+V0.6.2
+- Removed ccmclean.exe, and the .NET install in the "tools directory". More on this in the readme file
 #>
 $errorview = "categoryview"
 $dirwin = "C:\Windows"
